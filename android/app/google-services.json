@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "908273201460",
+    "project_id": "addmission-app-71551",
+    "storage_bucket": "addmission-app-71551.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:908273201460:android:4131b49b05060911907561",
+        "android_client_info": {
+          "package_name": "com.example.addmission_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1pC3g2PtyPNM57nKS5O_jRLNaPmcrR2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
