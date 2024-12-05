@@ -138,7 +138,17 @@ class _ContactDetailPageState extends State<ContactDetailPage> {
               valueListenable: isLoading,
               builder: (context, value, child) {
              return value ? Expanded(child: Center(child: CircularProgressIndicator()))
-                 : Expanded(
+                 : (callDetails?.isEmpty ?? false)
+             ? Expanded(
+               child: Column(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                 crossAxisAlignment: CrossAxisAlignment.center,
+                 children: [
+                   Text("You do not have this number in your contact"),
+                 ],
+               ),
+             )
+             : Expanded(
                child: SingleChildScrollView(
                  child: Column(
                    children: [
@@ -171,7 +181,9 @@ class _ContactDetailPageState extends State<ContactDetailPage> {
                          padding: const EdgeInsets.all(16.0),
                          child: Column(
                            children: [
-                             ListView.builder(
+                             (callDetails?.isEmpty ?? false)
+                                 ? const SizedBox()
+                                 : ListView.builder(
                                shrinkWrap: true,
                                padding: EdgeInsets.zero,
                                physics: ClampingScrollPhysics(),
