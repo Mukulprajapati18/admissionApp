@@ -1,5 +1,5 @@
-import 'dart:convert';
-import 'package:addmission_app/services/models/getEntityDetails.dart';
+// import 'dart:convert';
+// import 'package:addmission_app/services/models/getEntityDetails.dart';
 import 'package:addmission_app/services/variables.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -17,16 +17,16 @@ class DatabaseMethods {
 
   Future<Stream<QuerySnapshot<Map<String, dynamic>>>> getStudentDetails() async {
   // Future<void> getStudentDetails()async{
-    var collection = FirebaseFirestore.instance.collection(Variables.collectionName);
-    QuerySnapshot<Map<String, dynamic>> querySnapshot = await collection.get();
-    List<DocumentSnapshot> queryList = querySnapshot.docs;
-    var data = queryList[0].data();
-    for (var queryDocumentSnapshot in querySnapshot.docs) {
-      Map<String, dynamic> data = queryDocumentSnapshot.data();
+  //   var collection = FirebaseFirestore.instance.collection(Variables.collectionName);
+    // QuerySnapshot<Map<String, dynamic>> querySnapshot = await collection.get();
+    // List<DocumentSnapshot> queryList = querySnapshot.docs;
+    // var data = queryList[0].data();
+    // for (var queryDocumentSnapshot in querySnapshot.docs) {
+      // Map<String, dynamic> data = queryDocumentSnapshot.data();
       // List data1 = jsonDecode(data);
       // List<EntityDetailsModel> entityList = data.map((key, value) => EntityDetailsModel.fromJson(key, value)).toList();
       // can fill variables when needed like String name = data["Name"};
-    }
+    // }
     var querySnapshotStream = FirebaseFirestore.instance.collection(Variables.collectionName);
     return querySnapshotStream.snapshots();
   }
