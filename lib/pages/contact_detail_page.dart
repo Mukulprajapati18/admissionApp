@@ -95,10 +95,10 @@ class _ContactDetailPageState extends State<ContactDetailPage> {
     // await databaseMethods.addCallLogs(widget.contactId, callLogsMap);
   }
 
-  String _getMonthShort(int month) {
-    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    return months[month - 1];
-  }
+  // String _getMonthShort(int month) {
+  //   const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  //   return months[month - 1];
+  // }
 
   Widget userDetailRow(String heading, String value){
     return Row(
